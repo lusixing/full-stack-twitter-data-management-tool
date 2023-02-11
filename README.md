@@ -11,3 +11,13 @@ Install:
 ```
 docker-compose -f stack.yml build
 ```
+start the tool:
+1.run:
+```
+docker-compose -f stack.yml up
+```
+2.visit:
+```
+localhost:3000
+```
+in your browser.
