@@ -10,7 +10,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: abc123
     volumes:
-      - C:/mongo_data2/tweet_db:/data/db
+      - C:/mongo_data/tweet_db:/data/db
   backend:
       build:
         context: ./backend

@@ -171,25 +171,6 @@ def send_file(file):
     return send_from_directory('/flask-app1/static_media/', file)
 
 
-@app.route('/dl_test')
-def dl_test():
-    username = 'distinc69006927'
-    res = backend.tweets_handler.get_user_profile_by_name(username)
-    return {'state':'done','res':res}
-
-@app.route('/create_folder')
-def create_folder():
-    print('----------'*20)
-    print(os.getcwd())
-    try:
-        os.makedirs('/flask-app1/static_media/folder4')
-        with open("/flask-app1/static_media/4.txt", "wb") as handler:
-                handler.write(b"asdzxcsad")
-        return "Folder created successfully"
-    except Exception as e:
-        return str(e)
-
-
 if __name__ == "__main__":
     app.run(debug=True)
 
