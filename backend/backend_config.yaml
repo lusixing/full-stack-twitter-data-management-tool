@@ -1,0 +1,9 @@
+port: 27017
+auth: True
+username: admin
+password: abc123
+media_path: /flask-app1/static_media
+bearer_token: "put your bearer token here"
+
+
+

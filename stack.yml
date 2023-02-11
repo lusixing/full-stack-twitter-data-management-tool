@@ -1,0 +1,27 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: abc123
+    volumes:
+      - C:/mongo_data2/tweet_db:/data/db
+  backend:
+      build:
+        context: ./backend
+        dockerfile: backend.dockerfile
+      ports:
+        - "5000:5000"
+      volumes:
+        - C:/tmp_media_dev:/app/static_media 
+  frontend:
+      build:
+        context: ./frontend
+        dockerfile: frontend.dockerfile
+      ports:
+        - "3000:3000"
