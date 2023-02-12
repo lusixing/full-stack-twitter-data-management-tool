@@ -1,7 +1,7 @@
 # full stack twitter data management tool
 
 ## Description:
- A dockerized full-stack twitter data archiving tool written in React and Flask, use twitter APIv2 and MongoDB as database. 
+ A dockerized full-stack twitter data archiving tool written in React, Flask, Semantic-ui, use twitter APIv2 and MongoDB as database. 
  
  Store and manage twitter data and media locally.
  
